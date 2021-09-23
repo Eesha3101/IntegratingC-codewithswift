@@ -13,6 +13,8 @@
 		AC6FC4E826FCD61E001D8D00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6FC4E726FCD61E001D8D00 /* Preview Assets.xcassets */; };
 		AC6FC4F326FCD61E001D8D00 /* Integration_c__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FC4F226FCD61E001D8D00 /* Integration_c__Tests.swift */; };
 		AC6FC4FE26FCD61E001D8D00 /* Integration_c__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6FC4FD26FCD61E001D8D00 /* Integration_c__UITests.swift */; };
+		AC6FC50E26FCD699001D8D00 /* Helloworld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC6FC50C26FCD699001D8D00 /* Helloworld.cpp */; };
+		AC6FC51326FCD9B3001D8D00 /* HelloworldWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC6FC51226FCD9B3001D8D00 /* HelloworldWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,11 @@
 		AC6FC4F926FCD61E001D8D00 /* Integration_c++UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Integration_c++UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6FC4FD26FCD61E001D8D00 /* Integration_c__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integration_c__UITests.swift; sourceTree = "<group>"; };
 		AC6FC4FF26FCD61E001D8D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6FC50B26FCD699001D8D00 /* Integration_c++-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Integration_c++-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC6FC50C26FCD699001D8D00 /* Helloworld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Helloworld.cpp; sourceTree = "<group>"; };
+		AC6FC50D26FCD699001D8D00 /* Helloworld.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Helloworld.hpp; sourceTree = "<group>"; };
+		AC6FC50F26FCD93C001D8D00 /* HelloWorldWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldWrapper.h; sourceTree = "<group>"; };
+		AC6FC51226FCD9B3001D8D00 /* HelloworldWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloworldWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +82,7 @@
 		AC6FC4D426FCD61D001D8D00 = {
 			isa = PBXGroup;
 			children = (
+				AC6FC51226FCD9B3001D8D00 /* HelloworldWrapper.mm */,
 				AC6FC4DF26FCD61D001D8D00 /* Integration_c++ */,
 				AC6FC4F126FCD61E001D8D00 /* Integration_c++Tests */,
 				AC6FC4FC26FCD61E001D8D00 /* Integration_c++UITests */,
@@ -100,6 +108,10 @@
 				AC6FC4E426FCD61E001D8D00 /* Assets.xcassets */,
 				AC6FC4E926FCD61E001D8D00 /* Info.plist */,
 				AC6FC4E626FCD61E001D8D00 /* Preview Content */,
+				AC6FC50C26FCD699001D8D00 /* Helloworld.cpp */,
+				AC6FC50D26FCD699001D8D00 /* Helloworld.hpp */,
+				AC6FC50B26FCD699001D8D00 /* Integration_c++-Bridging-Header.h */,
+				AC6FC50F26FCD93C001D8D00 /* HelloWorldWrapper.h */,
 			);
 			path = "Integration_c++";
 			sourceTree = "<group>";
@@ -197,6 +209,7 @@
 				TargetAttributes = {
 					AC6FC4DC26FCD61D001D8D00 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					AC6FC4ED26FCD61E001D8D00 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -259,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6FC50E26FCD699001D8D00 /* Helloworld.cpp in Sources */,
 				AC6FC4E326FCD61D001D8D00 /* ContentView.swift in Sources */,
 				AC6FC4E126FCD61D001D8D00 /* Integration_c__App.swift in Sources */,
+				AC6FC51326FCD9B3001D8D00 /* HelloworldWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Integration_c++/Preview Content\"";
 				DEVELOPMENT_TEAM = H6D7HU33VP;
@@ -429,6 +445,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eeshapatel.Integration-c--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Integration_c++/Integration_c++-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Integration_c++/Preview Content\"";
 				DEVELOPMENT_TEAM = H6D7HU33VP;
@@ -451,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "eeshapatel.Integration-c--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Integration_c++/Integration_c++-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
